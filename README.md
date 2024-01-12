@@ -1,35 +1,10 @@
 # BetaTweaks StationAPI Edition for Minecraft Beta 1.7.3
 
-![stationapi-banner](https://github.com/telvarost/BetaTweaks-StationAPI/assets/25235249/f6331228-f1df-4e48-b33d-e94b46dcc703)
-
-**If you're looking for the ModLoader edition, see this repository:** https://github.com/2zqa/BetaTweaks
+**If you're looking for the ModLoader edition, see this repository:** https://github.com/rekadoodle/BetaTweaks
 
 **If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
 
-Mod review of the Modloader edition v1.4 by Modification Station/The Zyga (thanks!): https://www.youtube.com/watch?v=m8lX9jv9lhI
-
-The aim of this mod is to fix (major) annoyances or backport useful features that do not affect gameplay. List of fixes:
-
-- Pickaxes are also effective against: furnaces, cobblestone stairs, bricks, redstone ore, iron doors, rails, dispensers, stone pressure plates and monster spawners
-- Axes are also effective against: crafting tables, wooden slabs (experimental), wooden stairs, fences, wooden doors, ladders, signs, pumpkins, wooden pressure plates, jukeboxes and noteblocks
-- Fences are placeable like normal and bounding box was minimized when appropriate
-- Stairs drop themselves
-- Boats drop themselves
-- Pigs drop their saddles if they have a saddle equipped
-- Bookshelves drop three books
-- Boats don't break due to high velocity
-- Never fall through boats anymore when getting out
-- Pick block (middle mouse button click) works for blocks that are in the player's inventory, but not in their hotbar
-- Pick block also works on: paintings, minecarts (all three types), wooden doors, iron doors, signs, crops, redstone repeaters, redstone wire, beds, piston heads and cake
-- Add missing wooden items as fuel sources in furnace: wooden tools, wooden doors, boats, bowls, signs, and ladders
-- Repair armor and tools
-- Flint and steel does not lose durability if fire fails to ignite
-- Flowing lava now disappears when lava source block is removed
-- Chicken bounding box was increased to modern Minecraft bounding box size
-- Water spring propagation has been fixed: https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1283147-water-spring-propagation-fix
-- Also: most fixes are toggleable!
-
-To use pick block: Look at something and click your scroll wheel. If it's in your inventory, it will automatically be selected.
+## Mod Info (Under Construction):
 
 ## Installation using Prism Launcher
 
