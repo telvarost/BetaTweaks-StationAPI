@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "betatweaks",
+  "version": "${version}",
+
+  "name": "BetaTweaks",
+  "description": "Quality of Life mod for Legacy versions of Minecraft.",
+  "authors": [
+    "Telvarost",
+    "rekadoodle",
+    "BeefaloKing"
+  ],
+  "contact": {
+    "issues": "https://github.com/telvarost/BetaTweaks-StationAPI/issues",
+    "homepage": "https://github.com/telvarost/BetaTweaks-StationAPI/",
+    "sources": "https://github.com/telvarost/BetaTweaks-StationAPI/"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/betatweaks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:event_bus": [
+      "com.github.telvarost.betatweaks.events.init.RecipeListener"
+    ],
+    "stationapi:event_bus_client": [
+    ],
+    "stationapi:event_bus_server": [
+    ],
+    "gcapi": [
+      "com.github.telvarost.betatweaks.Config"
+    ]
+  },
+  "mixins": [
+    "betatweaks.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}
