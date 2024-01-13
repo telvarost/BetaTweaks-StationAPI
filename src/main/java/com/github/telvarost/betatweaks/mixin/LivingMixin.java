@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 /*
  * Thanks to EOfSL for the original solution: https://github.com/EOfSL
  */
-@Mixin(value = Living.class, remap = false)
+@Mixin(Living.class)
 abstract class LivingMixin extends EntityBase
 {
     public LivingMixin(Level arg) {

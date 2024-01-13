@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.*;
 /*
  * Thanks to Amb0s for the original solution: https://github.com/Amb0s
  */
-@Mixin(value = Fire.class, remap = false)
+@Mixin(Fire.class)
 public class FireMixin extends BlockBase
 {
     public FireMixin(int i, int j) {
@@ -22,7 +22,7 @@ public class FireMixin extends BlockBase
     }
 
     @ModifyConstant(method = "getTickrate", constant = @Constant(intValue = 40))
-    private int changeTickRate(int a)
+    private int betaTweaks_getTickrate(int a)
     {
         // It is 10 in beta before 1.6:
         return (Config.ConfigFields.fireTickRate * 10);
@@ -34,7 +34,7 @@ public class FireMixin extends BlockBase
             at = @At(value = "INVOKE",
             target = "Lnet/minecraft/level/Level;placeBlockWithMetaData(IIIII)Z")
     )
-    private boolean infiniteSpreading(@NotNull Level level, int x, int y, int z, int id, int meta)
+    private boolean betaTweaks_fireTick(@NotNull Level level, int x, int y, int z, int id, int meta)
     {
         // Make new fire blocks spawn with zero old:
         if (Config.ConfigFields.infiniteFireSpread)
