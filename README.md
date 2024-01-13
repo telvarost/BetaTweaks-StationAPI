@@ -7,19 +7,19 @@
 ## Mod Info:
 
 ### Implemented
+* Allow Gaps In Ladders
+* Elevator Boats
 * Hide Achievement Notifications
+* Hoe Grass For Seeds
+* Minecart Boosters
 * Punch Sheep For Wool
 * Punch TNT To Ignite
-* Hoe Grass For Seeds
-* Elevator Boats
-* Minecart Boosters
 
 ### Not Implemented
 * Inventory Dragging Shortcuts
 * FOV Slider
 * Disable Long Grass
 * Disable Dead Shrubs
-* Allow Gaps In Ladders
 
 ## Installation using Prism Launcher
 
