@@ -8,6 +8,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
+/*
+ * Thanks to EOfSL for the original solution: https://github.com/EOfSL
+ */
 @Mixin(Boat.class)
 abstract class BoatMixin extends EntityBase
 {

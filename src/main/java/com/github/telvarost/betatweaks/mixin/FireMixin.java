@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.*;
 
 
 /*
- * Thanks to Amb0s for the code: https://github.com/Amb0s
+ * Thanks to Amb0s for the original solution: https://github.com/Amb0s
  */
 @Mixin(value = Fire.class, remap = false)
 public class FireMixin extends BlockBase
@@ -25,7 +25,7 @@ public class FireMixin extends BlockBase
     private int changeTickRate(int a)
     {
         // It is 10 in beta before 1.6:
-        return Config.ConfigFields.fireTickRate;
+        return (Config.ConfigFields.fireTickRate * 10);
     }
 
 
@@ -40,22 +40,19 @@ public class FireMixin extends BlockBase
         if (Config.ConfigFields.infiniteFireSpread)
         {
             level.placeBlockWithMetaData(x, y, z, BlockBase.FIRE.id, 0);
-            return false;
         }
-        else
-        {
-            return level.placeBlockWithMetaData(x, y, z, id, meta);
-        }
+
+        return false;
     }
 
-
-    @Redirect(
-            method = "fireTick",
-            at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/src/BlockFire;setBurnResult(Lnet/minecraft/src/World;III)V")
-    )
-    private void cancelSetBurnResult(BlockFire instance, World world, int x, int y, int z)
-    {
-        // Remove a chance to burn a block before the fire block old will reach 15.
-    }
+    /** - I couldn't figure out what this was supposed to be targeting */
+//    @Redirect(
+//            method = "fireTick",
+//            at = @At(value = "INVOKE",
+//            target = "Lnet/minecraft/src/BlockFire;setBurnResult(Lnet/minecraft/src/World;III)V")
+//    )
+//    private void cancelSetBurnResult(BlockFire instance, World world, int x, int y, int z)
+//    {
+//        // Remove a chance to burn a block before the fire block old will reach 15.
+//    }
 }

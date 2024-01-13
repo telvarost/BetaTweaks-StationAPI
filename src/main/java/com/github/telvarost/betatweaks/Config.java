@@ -41,8 +41,9 @@ public class Config {
         @ConfigName("Spread Fire Infinitely")
         public static Boolean infiniteFireSpread = false;
 
-        @ConfigName("Spread Fire Tick Rate (Default: 40, Alpha: 10)")
-        public static Integer fireTickRate = 40;
+        /** - There is a bug that won't let the config go above 32, also Integer configs don't seem to save unless saved twice */
+        @ConfigName("Spread Fire Tick Rate * 10 (Def: 4, Alpha: 1)")
+        public static Integer fireTickRate = 4;
 
         @ConfigName("Minecart Boosters")
         public static Boolean minecartBoosters = false;
