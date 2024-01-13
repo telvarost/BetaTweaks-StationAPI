@@ -38,8 +38,8 @@ public class Config {
         @ConfigName("Hoe Grass For Seeds")
         public static Boolean hoeGrassForSeeds = false;
 
-//        @ConfigName("Minecart Boosters")
-//        public static Boolean minecartBoosters = true;
+        @ConfigName("Minecart Boosters")
+        public static Boolean minecartBoosters = true;
 
         @ConfigName("Elevator Boats")
         public static Boolean elevatorBoats = true;

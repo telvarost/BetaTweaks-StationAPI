@@ -12,6 +12,7 @@
 * Punch TNT To Ignite
 * Hoe Grass For Seeds
 * Elevator Boats
+* Minecart Boosters
 
 ### Not Implemented
 * Inventory Dragging Shortcuts
@@ -19,7 +20,6 @@
 * Disable Long Grass
 * Disable Dead Shrubs
 * Allow Gaps In Ladders
-* Minecart Boosters
 
 ## Installation using Prism Launcher
 
