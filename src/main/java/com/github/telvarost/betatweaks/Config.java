@@ -29,8 +29,8 @@ public class Config {
         @ConfigName("Punch Sheep For Wool")
         public static Boolean punchSheepForWool = false;
 
-//        @ConfigName("Allow Gaps In Ladders")
-//        public static Boolean allowGapsInLadders = true;
+        @ConfigName("Allow Gaps In Ladders")
+        public static Boolean allowGapsInLadders = true;
 
         @ConfigName("Punch TNT To Ignite")
         public static Boolean punchTntToIgnite = false;

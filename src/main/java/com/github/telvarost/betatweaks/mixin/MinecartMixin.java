@@ -23,7 +23,7 @@ abstract class MinecartMixin extends EntityBase implements InventoryBase
             at = @At(value = "STORE"),
             ordinal = 6
     )
-    private double d6ConditionDestroyer(double d6)
+    private double betaTweaks_minecartBoosterCondition(double d6)
     {
         if (Config.ConfigFields.minecartBoosters)
             return 0;
