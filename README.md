@@ -2,6 +2,8 @@
 
 **If you're looking for the ModLoader edition, see this repository:** https://github.com/rekadoodle/BetaTweaks
 
+**Special thanks to EOfSL and Amb0s for their similar BTA mod** https://github.com/EOfSL/bta-old-nostalgic-bugs
+
 **If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
 
 ## Mod Info:
