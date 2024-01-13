@@ -40,8 +40,8 @@ public class Config {
 
 //        @ConfigName("Minecart Boosters")
 //        public static Boolean minecartBoosters = true;
-//
-//        @ConfigName("Elevator Boats")
-//        public static Boolean elevatorBoats = true;
+
+        @ConfigName("Elevator Boats")
+        public static Boolean elevatorBoats = true;
     }
 }

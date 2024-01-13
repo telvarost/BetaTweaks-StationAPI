@@ -11,6 +11,7 @@
 * Punch Sheep For Wool
 * Punch TNT To Ignite
 * Hoe Grass For Seeds
+* Elevator Boats
 
 ### Not Implemented
 * Inventory Dragging Shortcuts
@@ -19,7 +20,6 @@
 * Disable Dead Shrubs
 * Allow Gaps In Ladders
 * Minecart Boosters
-* Elevator Boats
 
 ## Installation using Prism Launcher
 
