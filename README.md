@@ -2,6 +2,8 @@
 
 **If you're looking for the ModLoader edition, see this repository:** https://github.com/rekadoodle/BetaTweaks
 
+**Special thanks to EOfSL and Amb0s for their similar BTA mod** https://github.com/EOfSL/bta-old-nostalgic-bugs
+
 **If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
 
 ## Mod Info:
@@ -9,12 +11,13 @@
 ### Implemented
 * Allow Gaps In Ladders
 * Elevator Boats
+* Infinite fire spread and selectable tick rate
 * Hide Achievement Notifications
 * Hoe Grass For Seeds
 * Minecart Boosters
 * Punch Sheep For Wool
 * Punch TNT To Ignite
-* [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders.
+* [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders
 
 ### Not Implemented
 * Inventory Dragging Shortcuts

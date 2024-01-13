@@ -9,7 +9,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
-
+/*
+ * Thanks to EOfSL for the original solution: https://github.com/EOfSL
+ */
 @Mixin(Minecart.class)
 abstract class MinecartMixin extends EntityBase implements InventoryBase
 {

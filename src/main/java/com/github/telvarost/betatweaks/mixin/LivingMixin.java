@@ -12,6 +12,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+/*
+ * Thanks to EOfSL for the original solution: https://github.com/EOfSL
+ */
 @Mixin(value = Living.class, remap = false)
 abstract class LivingMixin extends EntityBase
 {
