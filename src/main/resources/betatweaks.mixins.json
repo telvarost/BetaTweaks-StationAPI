@@ -4,8 +4,10 @@
   "package": "com.github.telvarost.betatweaks.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "BoatMixin",
-    "PigMixin"
+    "AchievementMixin",
+    "HoeMixin",
+    "TntMixin",
+    "SheepMixin"
   ],
   "server": [
   ],
