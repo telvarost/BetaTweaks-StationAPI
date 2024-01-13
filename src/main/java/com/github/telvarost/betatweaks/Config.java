@@ -38,6 +38,12 @@ public class Config {
         @ConfigName("Hoe Grass For Seeds")
         public static Boolean hoeGrassForSeeds = false;
 
+        @ConfigName("Spread Fire Infinitely")
+        public static Boolean infiniteFireSpread = false;
+
+        @ConfigName("Spread Fire Tick Rate (Default: 40, Alpha: 10)")
+        public static Integer fireTickRate = 40;
+
         @ConfigName("Minecart Boosters")
         public static Boolean minecartBoosters = false;
 
