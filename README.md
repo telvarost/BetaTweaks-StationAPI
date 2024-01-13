@@ -14,6 +14,7 @@
 * Minecart Boosters
 * Punch Sheep For Wool
 * Punch TNT To Ignite
+* [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders.
 
 ### Not Implemented
 * Inventory Dragging Shortcuts

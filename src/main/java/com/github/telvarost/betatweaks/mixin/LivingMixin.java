@@ -2,7 +2,9 @@ package com.github.telvarost.betatweaks.mixin;
 
 import com.github.telvarost.betatweaks.Config;
 import net.minecraft.block.BlockBase;
+import net.minecraft.entity.EntityBase;
 import net.minecraft.entity.Living;
+import net.minecraft.level.Level;
 import net.minecraft.util.maths.MathHelper;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,8 +13,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = Living.class, remap = false)
-public class LivingMixin
+abstract class LivingMixin extends EntityBase
 {
+    public LivingMixin(Level arg) {
+        super(arg);
+    }
+
     @Inject(method = "method_932", at = @At("HEAD"), cancellable = true)
     public void betaTweaks_increaseLadderCoverage(@NotNull CallbackInfoReturnable<Boolean> cir)
     {

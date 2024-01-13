@@ -17,23 +17,23 @@ public class Config {
 //        @ConfigName("FOV Slider")
 //        public static Boolean fovSlider = true;
 
-        @ConfigName("Hide Achievement Notifications")
-        public static Boolean hideAchievementNotifications = false;
-
 //        @ConfigName("Disable Long Grass")
 //        public static Boolean disableLongGrass = true;
 //
 //        @ConfigName("Disable Dead Shrubs")
 //        public static Boolean disableDeadShrubs = true;
 
-        @ConfigName("Punch Sheep For Wool")
-        public static Boolean punchSheepForWool = false;
-
         @ConfigName("Allow Gaps In Ladders")
         public static Boolean allowGapsInLadders = false;
 
-        @ConfigName("Punch TNT To Ignite")
-        public static Boolean punchTntToIgnite = false;
+        @ConfigName("Enter Fluids By South-East Corner")
+        public static Boolean allowSouthEastRule = false;
+
+        @ConfigName("Elevator Boats")
+        public static Boolean elevatorBoats = false;
+
+        @ConfigName("Hide Achievement Notifications")
+        public static Boolean hideAchievementNotifications = false;
 
         @ConfigName("Hoe Grass For Seeds")
         public static Boolean hoeGrassForSeeds = false;
@@ -41,7 +41,10 @@ public class Config {
         @ConfigName("Minecart Boosters")
         public static Boolean minecartBoosters = false;
 
-        @ConfigName("Elevator Boats")
-        public static Boolean elevatorBoats = false;
+        @ConfigName("Punch Sheep For Wool")
+        public static Boolean punchSheepForWool = false;
+
+        @ConfigName("Punch TNT To Ignite")
+        public static Boolean punchTntToIgnite = false;
     }
 }
