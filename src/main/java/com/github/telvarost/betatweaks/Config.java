@@ -18,7 +18,7 @@ public class Config {
 //        public static Boolean fovSlider = true;
 
         @ConfigName("Hide Achievement Notifications")
-        public static Boolean hideAchievementNotifications = true;
+        public static Boolean hideAchievementNotifications = false;
 
 //        @ConfigName("Disable Long Grass")
 //        public static Boolean disableLongGrass = true;
@@ -27,16 +27,16 @@ public class Config {
 //        public static Boolean disableDeadShrubs = true;
 
         @ConfigName("Punch Sheep For Wool")
-        public static Boolean punchSheepForWool = true;
+        public static Boolean punchSheepForWool = false;
 
 //        @ConfigName("Allow Gaps In Ladders")
 //        public static Boolean allowGapsInLadders = true;
 
         @ConfigName("Punch TNT To Ignite")
-        public static Boolean punchTntToIgnite = true;
+        public static Boolean punchTntToIgnite = false;
 
         @ConfigName("Hoe Grass For Seeds")
-        public static Boolean hoeGrassForSeeds = true;
+        public static Boolean hoeGrassForSeeds = false;
 
 //        @ConfigName("Minecart Boosters")
 //        public static Boolean minecartBoosters = true;
