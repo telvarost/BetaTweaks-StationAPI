@@ -5,9 +5,10 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "AchievementMixin",
+    "BoatMixin",
     "HoeMixin",
-    "TntMixin",
-    "SheepMixin"
+    "SheepMixin",
+    "TntMixin"
   ],
   "server": [
   ],
