@@ -6,6 +6,7 @@
   "mixins": [
     "AchievementMixin",
     "BoatMixin",
+    "EntityMixin",
     "HoeMixin",
     "LivingMixin",
     "MinecartMixin",
