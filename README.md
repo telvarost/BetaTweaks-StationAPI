@@ -11,15 +11,19 @@
 ### Implemented
 * Allow Gaps In Ladders
 * Elevator Boats
-* Infinite Fire Spread And Selectable Tick Rate
-  * WARNING: Please be careful with this setting, always make sure it is false when editing configs unless if you really want it true
-  * Note: There currently seems to be a bug with GlassConfigAPI where Integer configs need to be saved twice to take effect
 * Hide Achievement Notifications
 * Hoe Grass For Seeds
 * Minecart Boosters
 * Punch Sheep For Wool
 * Punch TNT To Ignite
 * [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders
+
+### Optional
+Use version v1.1.0 to INCLUDE this tweak.
+Use version v1.1.1 to EXCLUDE this tweak.
+* Infinite Fire Spread And Selectable Tick Rate
+  * WARNING: Please be careful with this setting, always make sure it is false when editing configs unless if you really want it true
+  * Note: There currently seems to be a bug with GlassConfigAPI where Integer configs need to be saved twice to take effect
 
 ### Not Implemented
 * Inventory Dragging Shortcuts

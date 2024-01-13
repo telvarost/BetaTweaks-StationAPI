@@ -7,7 +7,6 @@
     "AchievementMixin",
     "BoatMixin",
     "EntityMixin",
-    "FireMixin",
     "HoeMixin",
     "LivingMixin",
     "MinecartMixin",
