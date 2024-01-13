@@ -7,8 +7,6 @@ import net.minecraft.entity.Item;
 import net.minecraft.entity.animal.AnimalBase;
 import net.minecraft.entity.animal.Sheep;
 import net.minecraft.entity.player.AbstractClientPlayer;
-import net.minecraft.entity.player.PlayerBase;
-import net.minecraft.item.ItemBase;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.level.Level;
 import org.spongepowered.asm.mixin.Mixin;

@@ -4,6 +4,7 @@
   "package": "com.github.telvarost.betatweaks.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "HoeMixin",
     "TntMixin",
     "SheepMixin"
   ],
