@@ -11,7 +11,7 @@
 ### Implemented
 * Allow Gaps In Ladders
 * Elevator Boats
-* Infinite fire spread and selectable tick rate
+* Infinite Fire Spread And Selectable Tick Rate
 * Hide Achievement Notifications
 * Hoe Grass For Seeds
 * Minecart Boosters
