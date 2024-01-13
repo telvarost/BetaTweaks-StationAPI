@@ -4,7 +4,22 @@
 
 **If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
 
-## Mod Info (Under Construction):
+## Mod Info:
+
+### Implemented
+* Hide Achievement Notifications
+* Punch Sheep For Wool
+* Punch TNT To Ignite
+* Hoe Grass For Seeds
+
+### Not Implemented
+* Inventory Dragging Shortcuts
+* FOV Slider
+* Disable Long Grass
+* Disable Dead Shrubs
+* Allow Gaps In Ladders
+* Minecart Boosters
+* Elevator Boats
 
 ## Installation using Prism Launcher
 
