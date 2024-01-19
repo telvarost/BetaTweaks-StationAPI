@@ -10,6 +10,7 @@ public class Config {
 
     public static class ConfigFields {
 
+        /** - These are a part of the InventoryTweaks mod. See: https://github.com/telvarost/InventoryTweaks-StationAPI */
 //        @ConfigName("Inventory Dragging Shortcuts")
 //        public static Boolean inventoryDraggingShortcuts = true;
 
@@ -22,6 +23,9 @@ public class Config {
 //
 //        @ConfigName("Disable Dead Shrubs")
 //        public static Boolean disableDeadShrubs = true;
+
+        @ConfigName("Player Crafting Grid Can Be Used As Inventory Slots")
+        public static Boolean allowCraftingInventorySlots = false;
 
         @ConfigName("Allow Gaps In Ladders")
         public static Boolean allowGapsInLadders = false;
