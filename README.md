@@ -9,6 +9,7 @@
 ## Mod Info:
 
 ### Implemented
+* Allow player crafting grid (2x2 grid) to be used as inventory slots.
 * Allow Gaps In Ladders
 * Elevator Boats
 * Hide Achievement Notifications

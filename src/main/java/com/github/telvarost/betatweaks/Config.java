@@ -10,6 +10,7 @@ public class Config {
 
     public static class ConfigFields {
 
+        /** - These are a part of the InventoryTweaks mod. See: https://github.com/telvarost/InventoryTweaks-StationAPI */
 //        @ConfigName("Inventory Dragging Shortcuts")
 //        public static Boolean inventoryDraggingShortcuts = true;
 
@@ -47,12 +48,14 @@ public class Config {
         @ConfigName("Punch TNT To Ignite")
         public static Boolean punchTntToIgnite = false;
 
-
 //        @ConfigName("Spread Fire Infinitely")
 //        public static Boolean infiniteFireSpread = false;
 //
 //        /** - There is a bug that won't let the config go above 32, also Integer configs don't seem to save unless saved twice */
 //        @ConfigName("Spread Fire Tick Rate * 10 (Def: 4, Alpha: 1)")
 //        public static Integer fireTickRate = 4;
+
+        @ConfigName("Use Player 2x2 Crafting Grid As Inventory")
+        public static Boolean allowCraftingInventorySlots = false;
     }
 }
