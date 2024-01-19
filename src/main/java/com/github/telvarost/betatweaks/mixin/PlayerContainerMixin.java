@@ -17,16 +17,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlayerContainer.class)
-public class ContainerPlayerMixin extends ContainerBase {
+public class PlayerContainerMixin extends ContainerBase {
     @Shadow public Crafting craftingInv;
     @Shadow public InventoryBase resultInv;
     @Shadow public boolean local;
 
-    public ContainerPlayerMixin(PlayerInventory arg) {
+    public PlayerContainerMixin(PlayerInventory arg) {
         this(arg, true);
     }
 
-    public ContainerPlayerMixin(PlayerInventory arg, boolean bl) {
+    public PlayerContainerMixin(PlayerInventory arg, boolean bl) {
         this.craftingInv = new Crafting(this, 2, 2);
         this.resultInv = new Chest();
         this.local = false;
