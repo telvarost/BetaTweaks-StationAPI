@@ -27,7 +27,7 @@ Use version v1.1.1 to EXCLUDE this tweak.
   * Note: There currently seems to be a bug with GlassConfigAPI where Integer configs need to be saved twice to take effect
 
 ### Not Implemented
-* Inventory Dragging Shortcuts
+* Inventory Dragging Shortcuts (See: https://github.com/telvarost/InventoryTweaks-StationAPI)
 * FOV Slider
 * Disable Long Grass
 * Disable Dead Shrubs
