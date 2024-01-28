@@ -29,8 +29,8 @@ Use version 1.2.0-fire to INCLUDE this tweak.
   * Note: There currently seems to be a bug with GlassConfigAPI where Integer configs need to be saved twice to take effect
 
 ### Not Implemented
-* Inventory Dragging Shortcuts (See: https://github.com/telvarost/InventoryTweaks-StationAPI)
-* FOV Slider
+* Inventory Dragging Shortcuts (implemented in [InventoryTweaks](https://modrinth.com/mod/inventorytweaks) instead)
+* FOV Slider (implemented in [FinalBeta-StationAPI](https://modrinth.com/mod/finalbeta-stationapi-edition) instead)
 * Disable Long Grass
 * Disable Dead Shrubs
 
