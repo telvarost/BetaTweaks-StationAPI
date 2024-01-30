@@ -14,10 +14,12 @@ public class Config {
 //        @ConfigName("Inventory Dragging Shortcuts")
 //        public static Boolean inventoryDraggingShortcuts = true;
 
-        /** - There are also title screen settings but that along with FOV I don't think I'll implement */
+        /** - FOV added to the StationAPI version of FinalBeta instead */
 //        @ConfigName("FOV Slider")
 //        public static Boolean fovSlider = true;
 
+        /** - There are also title screen settings that are missing that the original BetaTweaks had */
+        /** @todo - */
 //        @ConfigName("Disable Long Grass")
 //        public static Boolean disableLongGrass = true;
 //

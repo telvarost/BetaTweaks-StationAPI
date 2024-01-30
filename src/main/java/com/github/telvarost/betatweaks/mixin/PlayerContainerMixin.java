@@ -29,7 +29,6 @@ public class PlayerContainerMixin extends ContainerBase {
     public PlayerContainerMixin(PlayerInventory arg, boolean bl) {
         this.craftingInv = new Crafting(this, 2, 2);
         this.resultInv = new Chest();
-        this.local = false;
         this.local = bl;
         this.addSlot(new CraftingResult(arg.player, this.craftingInv, this.resultInv, 0, 144, 36));
     }

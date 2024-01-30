@@ -4,7 +4,6 @@
   "package": "com.github.telvarost.betatweaks.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "AchievementMixin",
     "BoatMixin",
     "EntityMixin",
     "HoeMixin",
@@ -18,6 +17,7 @@
   "server": [
   ],
   "client": [
+    "AchievementMixin"
   ],
   "injectors": {
     "defaultRequire": 1
