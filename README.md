@@ -14,9 +14,9 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * Allow player crafting grid (2x2 grid) to be used as inventory slots.
 * Allow Gaps In Ladders
 * Elevator Boats
-* Hide Achievement Notifications
-* Hide Dead Shrubs
-* Hide Long Grass
+* Hide/Show Achievement Notifications
+* Hide/Show Dead Shrubs
+* Hide/Show Long Grass
 * Hoe Grass For Seeds
 * Minecart Boosters
 * Punch Sheep For Wool
