@@ -24,7 +24,7 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders
 
 ### Optional
-Use version 1.2.1 to EXCLUDE this tweak.
+Use version 1.3.0 to EXCLUDE this tweak.
 Use version 1.2.0-fire to INCLUDE this tweak.
 * Infinite Fire Spread And Selectable Tick Rate
   * WARNING: Please be careful with this setting, always make sure it is false when editing configs unless if you really want it true
