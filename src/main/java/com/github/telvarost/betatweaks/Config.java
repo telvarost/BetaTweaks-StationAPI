@@ -1,5 +1,6 @@
 package com.github.telvarost.betatweaks;
 
+import blue.endless.jankson.Comment;
 import net.glasslauncher.mods.api.gcapi.api.ConfigName;
 import net.glasslauncher.mods.api.gcapi.api.GConfig;
 
@@ -19,12 +20,7 @@ public class Config {
 //        public static Boolean fovSlider = true;
 
         /** - There are also title screen settings that are missing that the original BetaTweaks had */
-        /** @todo - */
-//        @ConfigName("Disable Long Grass")
-//        public static Boolean disableLongGrass = true;
-//
-//        @ConfigName("Disable Dead Shrubs")
-//        public static Boolean disableDeadShrubs = true;
+        // Dany added some of these to UniTweaks
 
         @ConfigName("Allow Gaps In Ladders")
         public static Boolean allowGapsInLadders = false;
@@ -37,6 +33,14 @@ public class Config {
 
         @ConfigName("Hide Achievement Notifications")
         public static Boolean hideAchievementNotifications = false;
+
+        @ConfigName("Hide Dead Shrubs")
+        @Comment("Reload world for changes to take effect")
+        public static Boolean hideDeadShrubs = false;
+
+        @ConfigName("Hide Long Grass")
+        @Comment("Reload world for changes to take effect")
+        public static Boolean hideLongGrass = false;
 
         @ConfigName("Hoe Grass For Seeds")
         public static Boolean hoeGrassForSeeds = false;

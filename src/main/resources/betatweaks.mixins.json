@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BoatMixin",
+    "DeadBushMixin",
     "EntityMixin",
     "HoeMixin",
     "LivingMixin",
@@ -12,6 +13,7 @@
     "PlayerBaseMixin",
     "PlayerContainerMixin",
     "SheepMixin",
+    "TallGrassMixin",
     "TntMixin"
   ],
   "server": [

@@ -15,6 +15,8 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * Allow Gaps In Ladders
 * Elevator Boats
 * Hide Achievement Notifications
+* Hide Dead Shrubs
+* Hide Long Grass
 * Hoe Grass For Seeds
 * Minecart Boosters
 * Punch Sheep For Wool
@@ -31,8 +33,6 @@ Use version 1.2.0-fire to INCLUDE this tweak.
 ### Not Implemented
 * Inventory Dragging Shortcuts (implemented in [InventoryTweaks](https://modrinth.com/mod/inventorytweaks) instead)
 * FOV Slider (implemented in [FinalBeta-StationAPI](https://modrinth.com/mod/finalbeta-stationapi-edition) instead)
-* Disable Long Grass
-* Disable Dead Shrubs
 
 ## Installation using Prism Launcher
 
