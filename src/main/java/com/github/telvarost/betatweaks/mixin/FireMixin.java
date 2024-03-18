@@ -24,8 +24,8 @@ public class FireMixin extends BlockBase
     @ModifyConstant(method = "getTickrate", constant = @Constant(intValue = 40))
     private int betaTweaks_getTickrate(int a)
     {
-        // It is 10 in beta before 1.6:
-        return (Config.config.fireSpreadTickRate * 10);
+        /** - Tick rate is 10 before beta 1.6 */
+        return (Config.config.fireSpreadTickRate);
     }
 
 

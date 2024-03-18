@@ -9,6 +9,7 @@
 ## Mod Info:
 
 All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to enable them. See installation instructions below.
+* Mod now works on Multiplayer with GlassConfigAPI version 2.0+ used to sync configs!
 
 ### Implemented
 * Allow player crafting grid (2x2 grid) to be used as inventory slots.
