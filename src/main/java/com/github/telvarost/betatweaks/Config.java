@@ -3,6 +3,8 @@ package com.github.telvarost.betatweaks;
 import blue.endless.jankson.Comment;
 import net.glasslauncher.mods.api.gcapi.api.ConfigName;
 import net.glasslauncher.mods.api.gcapi.api.GConfig;
+import net.glasslauncher.mods.api.gcapi.api.MaxLength;
+import net.glasslauncher.mods.api.gcapi.api.MultiplayerSynced;
 
 public class Config {
 
@@ -23,45 +25,58 @@ public class Config {
         // Dany added some of these to UniTweaks
 
         @ConfigName("Allow Gaps In Ladders")
+        @MultiplayerSynced
         public static Boolean allowGapsInLadders = false;
 
         @ConfigName("Enter Fluids By South-East Corner")
+        @MultiplayerSynced
         public static Boolean allowSouthEastRule = false;
 
         @ConfigName("Elevator Boats")
+        @MultiplayerSynced
         public static Boolean elevatorBoats = false;
 
         @ConfigName("Hide Achievement Notifications")
+        @MultiplayerSynced
         public static Boolean hideAchievementNotifications = false;
 
         @ConfigName("Hide Dead Shrubs")
         @Comment("Reload world for changes to take effect")
+        @MultiplayerSynced
         public static Boolean hideDeadShrubs = false;
 
         @ConfigName("Hide Long Grass")
         @Comment("Reload world for changes to take effect")
+        @MultiplayerSynced
         public static Boolean hideLongGrass = false;
 
         @ConfigName("Hoe Grass For Seeds")
+        @MultiplayerSynced
         public static Boolean hoeGrassForSeeds = false;
 
         @ConfigName("Minecart Boosters")
+        @MultiplayerSynced
         public static Boolean minecartBoosters = false;
 
         @ConfigName("Punch Sheep For Wool")
+        @MultiplayerSynced
         public static Boolean punchSheepForWool = false;
 
         @ConfigName("Punch TNT To Ignite")
+        @MultiplayerSynced
         public static Boolean punchTntToIgnite = false;
 
-//        @ConfigName("Spread Fire Infinitely")
-//        public static Boolean infiniteFireSpread = false;
-//
-//        /** - There is a bug that won't let the config go above 32, also Integer configs don't seem to save unless saved twice */
-//        @ConfigName("Spread Fire Tick Rate * 10 (Def: 4, Alpha: 1)")
-//        public static Integer fireTickRate = 4;
+        @ConfigName("Spread Fire Infinitely")
+        @MultiplayerSynced
+        public static Boolean infiniteFireSpread = false;
+
+        @ConfigName("Spread Fire Tick Rate (Def: 40, Alpha: 10)")
+        @MaxLength(36863)
+        @MultiplayerSynced
+        public static Integer fireSpreadTickRate = 40;
 
         @ConfigName("Use Player 2x2 Crafting Grid As Inventory")
+        @MultiplayerSynced
         public static Boolean allowCraftingInventorySlots = false;
     }
 }
