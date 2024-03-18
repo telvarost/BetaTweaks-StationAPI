@@ -31,7 +31,7 @@ public class HoeMixin extends ItemBase implements StationHoeItem {
             cancellable = true
     )
     public void betaTweaks_useOnTile(ItemInstance arg, PlayerBase arg2, Level arg3, int i, int j, int k, int l, CallbackInfoReturnable<Boolean> cir) {
-        if (!Config.ConfigFields.hoeGrassForSeeds)
+        if (!Config.config.hoeGrassForSeeds)
         {
             return;
         }

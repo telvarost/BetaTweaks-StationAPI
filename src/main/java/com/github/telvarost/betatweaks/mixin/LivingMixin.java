@@ -25,7 +25,7 @@ abstract class LivingMixin extends EntityBase
     @Inject(method = "method_932", at = @At("HEAD"), cancellable = true)
     public void betaTweaks_increaseLadderCoverage(@NotNull CallbackInfoReturnable<Boolean> cir)
     {
-        if (!Config.ConfigFields.allowGapsInLadders)
+        if (!Config.config.allowGapsInLadders)
         {
             return;
         }

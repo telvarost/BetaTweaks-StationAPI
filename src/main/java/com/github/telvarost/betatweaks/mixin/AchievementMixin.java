@@ -33,7 +33,7 @@ public class AchievementMixin extends DrawableHelper {
             cancellable = true
     )
     public void setAchievementGet(net.minecraft.achievement.Achievement arg, CallbackInfo ci) {
-        if (Config.ConfigFields.hideAchievementNotifications)
+        if (Config.config.hideAchievementNotifications)
         {
             ci.cancel();
         }

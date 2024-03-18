@@ -29,7 +29,7 @@ public class TntMixin extends BlockBase {
             )
     )
     public ItemInstance betaTweaks_getHeldItem(PlayerBase instance) {
-        if (Config.ConfigFields.punchTntToIgnite)
+        if (Config.config.punchTntToIgnite)
         {
             return new ItemInstance(ItemBase.flintAndSteel, 1);
         }

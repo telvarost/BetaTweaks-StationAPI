@@ -36,7 +36,7 @@ public abstract class SheepMixin extends AnimalBase {
             cancellable = true
     )
     public void betaTweaks_damage(EntityBase arg, int i, CallbackInfoReturnable<Boolean> cir) {
-        if (!Config.ConfigFields.punchSheepForWool)
+        if (!Config.config.punchSheepForWool)
         {
             return;
         }

@@ -19,7 +19,7 @@ public class EntityMixin
     @Inject(method = "method_1393", at = @At("HEAD"), cancellable = true)
     private void betaTweaks_handleWaterMovement(@NotNull CallbackInfoReturnable<Boolean> cir)
     {
-        if (!Config.ConfigFields.allowSouthEastRule)
+        if (!Config.config.allowSouthEastRule)
         {
             return;
         }
@@ -35,7 +35,7 @@ public class EntityMixin
     @Inject(method = "method_1335", at = @At("HEAD"), cancellable = true)
     private void betaTweaks_handleLavaMovement(@NotNull CallbackInfoReturnable<Boolean> cir)
     {
-        if (!Config.ConfigFields.allowSouthEastRule)
+        if (!Config.config.allowSouthEastRule)
         {
             return;
         }

@@ -25,7 +25,7 @@ public class FireMixin extends BlockBase
     private int betaTweaks_getTickrate(int a)
     {
         // It is 10 in beta before 1.6:
-        return (Config.ConfigFields.fireSpreadTickRate * 10);
+        return (Config.config.fireSpreadTickRate * 10);
     }
 
 
@@ -37,7 +37,7 @@ public class FireMixin extends BlockBase
     private boolean betaTweaks_fireTick(@NotNull Level level, int x, int y, int z, int id, int meta)
     {
         // Make new fire blocks spawn with zero old:
-        if (Config.ConfigFields.infiniteFireSpread)
+        if (Config.config.infiniteFireSpread)
         {
             level.placeBlockWithMetaData(x, y, z, BlockBase.FIRE.id, 0);
         }

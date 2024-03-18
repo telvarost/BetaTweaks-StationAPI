@@ -27,7 +27,7 @@ abstract class MinecartMixin extends EntityBase implements InventoryBase
     )
     private double betaTweaks_minecartBoosterCondition(double d6)
     {
-        if (Config.ConfigFields.minecartBoosters)
+        if (Config.config.minecartBoosters)
             return 0;
         else
             return d6;

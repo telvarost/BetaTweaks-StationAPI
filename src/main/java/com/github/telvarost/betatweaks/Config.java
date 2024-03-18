@@ -1,10 +1,7 @@
 package com.github.telvarost.betatweaks;
 
 import blue.endless.jankson.Comment;
-import net.glasslauncher.mods.api.gcapi.api.ConfigName;
-import net.glasslauncher.mods.api.gcapi.api.GConfig;
-import net.glasslauncher.mods.api.gcapi.api.MaxLength;
-import net.glasslauncher.mods.api.gcapi.api.MultiplayerSynced;
+import net.glasslauncher.mods.api.gcapi.api.*;
 
 public class Config {
 
@@ -15,68 +12,80 @@ public class Config {
 
         /** - These are a part of the InventoryTweaks mod. See: https://github.com/telvarost/InventoryTweaks-StationAPI */
 //        @ConfigName("Inventory Dragging Shortcuts")
-//        public static Boolean inventoryDraggingShortcuts = true;
+//        public Boolean inventoryDraggingShortcuts = true;
 
         /** - FOV added to the StationAPI version of FinalBeta instead */
 //        @ConfigName("FOV Slider")
-//        public static Boolean fovSlider = true;
+//        public Boolean fovSlider = true;
 
         /** - There are also title screen settings that are missing that the original BetaTweaks had */
         // Dany added some of these to UniTweaks
 
         @ConfigName("Allow Gaps In Ladders")
         @MultiplayerSynced
-        public static Boolean allowGapsInLadders = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean allowGapsInLadders = false;
 
         @ConfigName("Enter Fluids By South-East Corner")
         @MultiplayerSynced
-        public static Boolean allowSouthEastRule = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean allowSouthEastRule = false;
 
         @ConfigName("Elevator Boats")
         @MultiplayerSynced
-        public static Boolean elevatorBoats = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean elevatorBoats = false;
 
         @ConfigName("Hide Achievement Notifications")
-        @MultiplayerSynced
-        public static Boolean hideAchievementNotifications = false;
+        public Boolean hideAchievementNotifications = false;
 
         @ConfigName("Hide Dead Shrubs")
         @Comment("Reload world for changes to take effect")
         @MultiplayerSynced
-        public static Boolean hideDeadShrubs = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean hideDeadShrubs = false;
 
         @ConfigName("Hide Long Grass")
         @Comment("Reload world for changes to take effect")
         @MultiplayerSynced
-        public static Boolean hideLongGrass = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean hideLongGrass = false;
 
         @ConfigName("Hoe Grass For Seeds")
         @MultiplayerSynced
-        public static Boolean hoeGrassForSeeds = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean hoeGrassForSeeds = false;
 
         @ConfigName("Minecart Boosters")
         @MultiplayerSynced
-        public static Boolean minecartBoosters = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean minecartBoosters = false;
 
         @ConfigName("Punch Sheep For Wool")
         @MultiplayerSynced
-        public static Boolean punchSheepForWool = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean punchSheepForWool = false;
 
         @ConfigName("Punch TNT To Ignite")
         @MultiplayerSynced
-        public static Boolean punchTntToIgnite = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean punchTntToIgnite = false;
 
         @ConfigName("Spread Fire Infinitely")
         @MultiplayerSynced
-        public static Boolean infiniteFireSpread = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean infiniteFireSpread = false;
 
-        @ConfigName("Spread Fire Tick Rate (Def: 40, Alpha: 10)")
+        @ConfigName("Spread Fire Tick Rate")
+        @Comment("Default: 40, Alpha: 10")
         @MaxLength(36863)
         @MultiplayerSynced
-        public static Integer fireSpreadTickRate = 40;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Integer fireSpreadTickRate = 40;
 
         @ConfigName("Use Player 2x2 Crafting Grid As Inventory")
         @MultiplayerSynced
-        public static Boolean allowCraftingInventorySlots = false;
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean allowCraftingInventorySlots = false;
     }
 }
