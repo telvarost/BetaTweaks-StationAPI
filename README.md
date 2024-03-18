@@ -23,7 +23,7 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * Punch Sheep For Wool
 * Punch TNT To Ignite
 * [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders
-* Infinite Fire Spread And Selectable Tick Rate
+* Infinite Fire Spread and Selectable Tick Rate
   * WARNING: Please be careful with this setting, always make sure it is false when editing configs unless if you really want it true
 
 ### Not Implemented
