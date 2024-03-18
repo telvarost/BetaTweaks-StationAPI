@@ -44,8 +44,8 @@ public class HoeMixin extends ItemBase implements StationHoeItem {
             if (var8 == BlockBase.GRASS.id)
             {
                 Random rand = new Random();
-                int seedsId;
-                if ((seedsId = BlockBase.TALLGRASS.getDropId(0, rand)) != -1) {
+                int seedsId = this.rand.nextInt(8) == 0 ? ItemBase.seeds.id : -1;
+                if (seedsId != -1) {
                     float f = 0.7F;
                     float f1 = rand.nextFloat() * f + (1.0F - f) * 0.5F;
                     float f2 = 1.2F;
