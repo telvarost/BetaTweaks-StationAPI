@@ -21,7 +21,7 @@ abstract class BoatMixin extends EntityBase
     @ModifyConstant(method = "tick", constant = @Constant(doubleValue = 1.0, ordinal = 1))
     private double betaTweaks_elevatorBoatCondition(double d)
     {
-        if (Config.ConfigFields.elevatorBoats)
+        if (Config.config.elevatorBoats)
         {
             return Double.MAX_VALUE;
         }

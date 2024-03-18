@@ -27,7 +27,7 @@ public class TallGrassMixin extends Plant {
             cancellable = true
     )
     public void getDropId(int i, Random random, CallbackInfoReturnable<Integer> cir) {
-        if (Config.ConfigFields.hideLongGrass) {
+        if (Config.config.hideLongGrass) {
             cir.setReturnValue(-1);
         }
     }
@@ -41,7 +41,7 @@ public class TallGrassMixin extends Plant {
     @Override
     @Environment(EnvType.CLIENT)
     public int getRenderType() {
-        if (Config.ConfigFields.hideLongGrass) {
+        if (Config.config.hideLongGrass) {
             return 0;
         }
         else
@@ -52,7 +52,7 @@ public class TallGrassMixin extends Plant {
 
     @Override
     public void updateBoundingBox(BlockView blockView, int x, int y, int z) {
-        if (Config.ConfigFields.hideLongGrass) {
+        if (Config.config.hideLongGrass) {
             this.setBoundingBox(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
         }
         else {

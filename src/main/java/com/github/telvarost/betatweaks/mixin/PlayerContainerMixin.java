@@ -35,7 +35,7 @@ public class PlayerContainerMixin extends ContainerBase {
 
     @Inject(method = "onClosed", at = @At("HEAD"), cancellable = true)
     public void onClosed(PlayerBase arg, CallbackInfo ci) {
-        if (Config.ConfigFields.allowCraftingInventorySlots)
+        if (Config.config.allowCraftingInventorySlots)
         {
             super.onClosed(arg);
             ci.cancel();

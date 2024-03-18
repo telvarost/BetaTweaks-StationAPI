@@ -9,6 +9,7 @@
 ## Mod Info:
 
 All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to enable them. See installation instructions below.
+* Mod now works on Multiplayer with GlassConfigAPI version 2.0+ used to sync configs!
 
 ### Implemented
 * Allow player crafting grid (2x2 grid) to be used as inventory slots.
@@ -22,13 +23,8 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * Punch Sheep For Wool
 * Punch TNT To Ignite
 * [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders
-
-### Optional
-Use version 1.3.0 to EXCLUDE this tweak.
-Use version 1.2.0-fire to INCLUDE this tweak.
 * Infinite Fire Spread And Selectable Tick Rate
   * WARNING: Please be careful with this setting, always make sure it is false when editing configs unless if you really want it true
-  * Note: There currently seems to be a bug with GlassConfigAPI where Integer configs need to be saved twice to take effect
 
 ### Not Implemented
 * Inventory Dragging Shortcuts (implemented in [InventoryTweaks](https://modrinth.com/mod/inventorytweaks) instead)
@@ -38,9 +34,9 @@ Use version 1.2.0-fire to INCLUDE this tweak.
 
 1. Download an instance of Babric for Prism Launcher: https://github.com/babric/prism-instance
 2. Install Java 17, set the instance to use it, and disable compatibility checks on the instance: https://adoptium.net/temurin/releases/
-3. Add StationAPI to the mod folder for the instance: https://jenkins.glass-launcher.net/job/StationAPI/lastSuccessfulBuild/
-4. (Required) Add Mod Menu to the mod folder for the instance: https://github.com/calmilamsy/ModMenu/releases
-5. (Required) Add GlassConfigAPI 1.1.6+ to the mod folder for the instance: https://maven.glass-launcher.net/#/releases/net/glasslauncher/mods/GlassConfigAPI
+3. Add StationAPI to the mod folder for the instance: https://modrinth.com/mod/stationapi
+4. (Required) Add Mod Menu to the mod folder for the instance: https://modrinth.com/mod/modmenu-beta
+5. (Required) Add GlassConfigAPI 2.0+ to the mod folder for the instance: https://modrinth.com/mod/glass-config-api
 6. Add this mod to the mod folder for the instance: https://github.com/telvarost/BetaTweaks-StationAPI/releases
 7. Run and enjoy! 👍
 

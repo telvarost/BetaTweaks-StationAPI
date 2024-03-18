@@ -4,11 +4,12 @@
   "version": "${version}",
 
   "name": "BetaTweaks",
-  "description": "Quality of Life mod for Legacy versions of Minecraft.",
+  "description": "Nostalgic bugs mod for legacy versions of Minecraft. Bringing back bugs/features from older versions!",
   "authors": [
     "Telvarost",
     "rekadoodle",
-    "EOfSL"
+    "EOfSL",
+    "Amb0s"
   ],
   "contact": {
     "issues": "https://github.com/telvarost/BetaTweaks-StationAPI/issues",

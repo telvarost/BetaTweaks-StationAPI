@@ -34,7 +34,7 @@ public abstract class PlayerBaseMixin extends Living {
 
     @Inject(method = "writeCustomDataToTag", at = @At("HEAD"))
     private void betaTweaks_writeCustomDataToTag(CompoundTag tag, CallbackInfo info) {
-        if (!Config.ConfigFields.allowCraftingInventorySlots) {
+        if (!Config.config.allowCraftingInventorySlots) {
             return;
         }
 
@@ -66,7 +66,7 @@ public abstract class PlayerBaseMixin extends Living {
 
     @Inject(method = "readCustomDataFromTag", at = @At("HEAD"))
     private void betaTweaks_readCustomDataFromTag(CompoundTag tag, CallbackInfo info) {
-        if (!Config.ConfigFields.allowCraftingInventorySlots) {
+        if (!Config.config.allowCraftingInventorySlots) {
             return;
         }
 
