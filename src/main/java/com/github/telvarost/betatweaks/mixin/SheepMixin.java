@@ -6,7 +6,7 @@ import net.minecraft.entity.EntityBase;
 import net.minecraft.entity.Item;
 import net.minecraft.entity.animal.AnimalBase;
 import net.minecraft.entity.animal.Sheep;
-import net.minecraft.entity.player.AbstractClientPlayer;
+import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
@@ -41,7 +41,7 @@ public abstract class SheepMixin extends AnimalBase {
             return;
         }
 
-        if (arg != null && arg.getClass() == AbstractClientPlayer.class && !this.isSheared()) {
+        if (arg != null && arg.getClass() == PlayerBase.class && !this.isSheared()) {
             if (!this.level.isServerSide) {
                 this.setSheared(true);
                 int var3 = 2 + this.rand.nextInt(3);
