@@ -53,19 +53,6 @@ public abstract class SheepMixin extends AnimalBase {
                     var5.velocityX += (double) ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
                     var5.velocityZ += (double) ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
                 }
-            } else {
-                PlayerBase player = PlayerHelper.getPlayerFromGame();
-                if (player == null) {
-                    this.setSheared(true);
-                    int var3 = 2 + this.rand.nextInt(3);
-
-                    for (int var4 = 0; var4 < var3; ++var4) {
-                        Item var5 = this.dropItem(new ItemInstance(BlockBase.WOOL.id, 1, this.getColour()), 1.0F);
-                        var5.velocityY += (double) (this.rand.nextFloat() * 0.05F);
-                        var5.velocityX += (double) ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
-                        var5.velocityZ += (double) ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.1F);
-                    }
-                }
             }
         }
     }
