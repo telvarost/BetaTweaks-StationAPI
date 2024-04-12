@@ -20,6 +20,7 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * Hide/Show Long Grass
 * Hoe Grass For Seeds
 * Minecart Boosters
+* Have Pigs Drop Brown Mushrooms
 * Punch Sheep For Wool
 * Punch TNT To Ignite
 * [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into fluids through the south-east corner or into some sides via signs/ladders

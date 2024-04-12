@@ -61,6 +61,11 @@ public class Config {
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean minecartBoosters = false;
 
+        @ConfigName("Pigs Drop Brown Mushrooms")
+        @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean pigsDropBrownMushrooms = false;
+
         @ConfigName("Punch Sheep For Wool")
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)

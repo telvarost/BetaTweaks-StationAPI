@@ -10,6 +10,7 @@
     "HoeMixin",
     "LivingMixin",
     "MinecartMixin",
+    "PigMixin",
     "PlayerBaseMixin",
     "PlayerContainerMixin",
     "SheepMixin",
