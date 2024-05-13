@@ -14,6 +14,7 @@
     "PlayerBaseMixin",
     "PlayerContainerMixin",
     "SheepMixin",
+    "SquidMixin",
     "TallGrassMixin",
     "TntMixin"
   ],

@@ -19,6 +19,7 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 * Hide/Show Dead Shrubs
 * Hide/Show Long Grass
 * Hoe Grass For Seeds
+* Milk Squids
 * Minecart Boosters
 * Have Pigs Drop Brown Mushrooms
 * Punch Sheep For Wool

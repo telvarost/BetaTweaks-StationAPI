@@ -56,6 +56,11 @@ public class Config {
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean hoeGrassForSeeds = false;
 
+        @ConfigName("Milk Squids")
+        @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        public Boolean milkSquids = false;
+
         @ConfigName("Minecart Boosters")
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
