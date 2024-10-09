@@ -1,10 +1,10 @@
 package com.github.telvarost.betatweaks.mixin;
 
 import com.github.telvarost.betatweaks.Config;
-import net.minecraft.block.BlockBase;
-import net.minecraft.block.Fire;
+import net.minecraft.block.Block;
+import net.minecraft.block.FireBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.level.Level;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
@@ -13,15 +13,15 @@ import org.spongepowered.asm.mixin.injection.*;
 /*
  * Thanks to Amb0s for the original solution: https://github.com/Amb0s
  */
-@Mixin(Fire.class)
-public class FireMixin extends BlockBase
+@Mixin(FireBlock.class)
+public class FireMixin extends Block
 {
     public FireMixin(int i, int j) {
         super(i, j, Material.FIRE);
-        this.setTicksRandomly(true);
+        this.setTickRandomly(true);
     }
 
-    @ModifyConstant(method = "getTickrate", constant = @Constant(intValue = 40))
+    @ModifyConstant(method = "getTickRate", constant = @Constant(intValue = 40))
     private int betaTweaks_getTickrate(int a)
     {
         /** - Tick rate is 10 before beta 1.6 */
@@ -30,16 +30,18 @@ public class FireMixin extends BlockBase
 
 
     @Redirect(
-            method = "fireTick",
-            at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/level/Level;placeBlockWithMetaData(IIIII)Z")
+            method = "onTick",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/World;setBlock(IIIII)Z"
+            )
     )
-    private boolean betaTweaks_fireTick(@NotNull Level level, int x, int y, int z, int id, int meta)
+    private boolean betaTweaks_fireTick(@NotNull World level, int x, int y, int z, int id, int meta)
     {
         // Make new fire blocks spawn with zero old:
         if (Config.config.infiniteFireSpread)
         {
-            level.placeBlockWithMetaData(x, y, z, BlockBase.FIRE.id, 0);
+            level.setBlock(x, y, z, Block.FIRE.id, 0);
         }
 
         return false;

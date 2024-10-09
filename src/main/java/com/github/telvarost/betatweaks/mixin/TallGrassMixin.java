@@ -3,11 +3,9 @@ package com.github.telvarost.betatweaks.mixin;
 import com.github.telvarost.betatweaks.Config;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.Plant;
-import net.minecraft.block.TallGrass;
-import net.minecraft.item.ItemBase;
-import net.minecraft.level.BlockView;
-import net.minecraft.util.maths.Box;
+import net.minecraft.block.PlantBlock;
+import net.minecraft.block.TallPlantBlock;
+import net.minecraft.world.BlockView;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,14 +13,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Random;
 
-@Mixin(TallGrass.class)
-public class TallGrassMixin extends Plant {
+@Mixin(TallPlantBlock.class)
+public class TallGrassMixin extends PlantBlock {
     public TallGrassMixin(int i, int j) {
         super(i, j);
     }
 
     @Inject(
-            method = "getDropId",
+            method = "getDroppedItemId",
             at = @At("HEAD"),
             cancellable = true
     )
@@ -34,7 +32,7 @@ public class TallGrassMixin extends Plant {
 
     @Override
     @Environment(EnvType.CLIENT)
-    public boolean isSideRendered(BlockView arg, int i, int j, int k, int l) {
+    public boolean isSideVisible(BlockView arg, int i, int j, int k, int l) {
         return false;
     }
 

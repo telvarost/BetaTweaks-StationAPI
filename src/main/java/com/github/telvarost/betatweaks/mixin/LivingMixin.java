@@ -1,11 +1,11 @@
 package com.github.telvarost.betatweaks.mixin;
 
 import com.github.telvarost.betatweaks.Config;
-import net.minecraft.block.BlockBase;
-import net.minecraft.entity.EntityBase;
-import net.minecraft.entity.Living;
-import net.minecraft.level.Level;
-import net.minecraft.util.maths.MathHelper;
+import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,14 +15,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 /*
  * Thanks to EOfSL for the original solution: https://github.com/EOfSL
  */
-@Mixin(Living.class)
-abstract class LivingMixin extends EntityBase
+@Mixin(LivingEntity.class)
+abstract class LivingMixin extends Entity
 {
-    public LivingMixin(Level arg) {
+    public LivingMixin(World arg) {
         super(arg);
     }
 
-    @Inject(method = "method_932", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "isOnLadder", at = @At("HEAD"), cancellable = true)
     public void betaTweaks_increaseLadderCoverage(@NotNull CallbackInfoReturnable<Boolean> cir)
     {
         if (!Config.config.allowGapsInLadders)
@@ -30,15 +30,15 @@ abstract class LivingMixin extends EntityBase
             return;
         }
 
-        Living self = ((Living) ((Object) this));
+        LivingEntity self = ((LivingEntity) ((Object) this));
         int x = MathHelper.floor(self.x);
         int yd = MathHelper.floor(self.boundingBox.minY);
         int yu = yd + 1;
         int z = MathHelper.floor(self.z);
 
-        int id1 = self.level.getTileId(x, yd, z);
-        int id2 = self.level.getTileId(x, yu, z);
+        int id1 = self.world.getBlockId(x, yd, z);
+        int id2 = self.world.getBlockId(x, yu, z);
 
-        cir.setReturnValue(id1 == BlockBase.LADDER.id || id2 == BlockBase.LADDER.id);
+        cir.setReturnValue(id1 == Block.LADDER.id || id2 == Block.LADDER.id);
     }
 }

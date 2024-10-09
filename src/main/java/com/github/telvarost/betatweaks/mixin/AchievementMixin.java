@@ -4,10 +4,9 @@ import com.github.telvarost.betatweaks.Config;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Achievement;
-import net.minecraft.client.gui.DrawableHelper;
-import net.minecraft.client.render.entity.ItemRenderer;
-import net.minecraft.client.resource.language.I18n;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.gui.hud.toast.AchievementToast;
+import net.minecraft.client.render.item.ItemRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,20 +14,20 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Environment(EnvType.CLIENT)
-@Mixin(Achievement.class)
-public class AchievementMixin extends DrawableHelper {
+@Mixin(AchievementToast.class)
+public class AchievementMixin extends DrawContext {
     @Shadow
-    private Minecraft minecraft;
+    private Minecraft client;
     @Shadow
-    private ItemRenderer itemRenderer;
+    private ItemRenderer field_2578;
 
     public AchievementMixin(Minecraft minecraft) {
-        this.minecraft = minecraft;
-        this.itemRenderer = new ItemRenderer();
+        this.client = minecraft;
+        this.field_2578 = new ItemRenderer();
     }
 
     @Inject(
-            method = "setAchievementGet",
+            method = "method_1964",
             at = @At("HEAD"),
             cancellable = true
     )

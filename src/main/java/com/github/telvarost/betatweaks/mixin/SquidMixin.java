@@ -1,26 +1,26 @@
 package com.github.telvarost.betatweaks.mixin;
 
 import com.github.telvarost.betatweaks.Config;
-import net.minecraft.entity.player.PlayerBase;
-import net.minecraft.entity.swimming.Squid;
-import net.minecraft.entity.swimming.SwimmingBase;
-import net.minecraft.item.ItemBase;
-import net.minecraft.item.ItemInstance;
-import net.minecraft.level.Level;
+import net.minecraft.entity.WaterCreatureEntity;
+import net.minecraft.entity.passive.SquidEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(Squid.class)
-public class SquidMixin extends SwimmingBase {
-    public SquidMixin(Level arg) {
+@Mixin(SquidEntity.class)
+public class SquidMixin extends WaterCreatureEntity {
+    public SquidMixin(World arg) {
         super(arg);
     }
 
     @Override
-    public boolean interact(PlayerBase arg) {
+    public boolean interact(PlayerEntity arg) {
         if (Config.config.milkSquids) {
-            ItemInstance var2 = arg.inventory.getHeldItem();
-            if (var2 != null && var2.itemId == ItemBase.bucket.id) {
-                arg.inventory.setInventoryItem(arg.inventory.selectedHotbarSlot, new ItemInstance(ItemBase.milk));
+            ItemStack var2 = arg.inventory.getSelectedItem();
+            if (var2 != null && var2.itemId == Item.BUCKET.id) {
+                arg.inventory.setStack(arg.inventory.selectedSlot, new ItemStack(Item.MILK_BUCKET));
                 return true;
             } else {
                 return false;
