@@ -23,13 +23,12 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "com.github.telvarost.betatweaks.events.init.RecipeListener"
     ],
     "stationapi:event_bus_client": [
     ],
     "stationapi:event_bus_server": [
     ],
-    "gcapi": [
+    "gcapi3": [
       "com.github.telvarost.betatweaks.Config"
     ]
   },
@@ -38,6 +37,16 @@
   ],
 
   "depends": {
-    "minecraft": "1.0.0-beta.7.3"
+    "minecraft": "1.0.0-beta.7.3",
+    "gcapi3": ">=3.0.1",
+    "stationapi": "*"
+  },
+
+  "recommends": {
+    "modmenu": "*"
+  },
+
+  "breaks": {
+    "unitweaks": "*"
   }
 }

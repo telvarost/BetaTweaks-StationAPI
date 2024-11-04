@@ -1,11 +1,10 @@
 package com.github.telvarost.betatweaks;
 
-import blue.endless.jankson.Comment;
-import net.glasslauncher.mods.api.gcapi.api.*;
+import net.glasslauncher.mods.gcapi3.api.*;
 
 public class Config {
 
-    @GConfig(value = "config", visibleName = "BetaTweaks")
+    @ConfigRoot(value = "config", visibleName = "BetaTweaks")
     public static ConfigFields config = new ConfigFields();
 
     public static class ConfigFields {
@@ -21,81 +20,95 @@ public class Config {
         /** - There are also title screen settings that are missing that the original BetaTweaks had */
         // Dany added some of these to UniTweaks
 
-        @ConfigName("Allow Gaps In Ladders")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Allow Gaps In Ladders",
+                multiplayerSynced = true
+        )
         public Boolean allowGapsInLadders = false;
 
-        @ConfigName("Enter Fluids By South-East Corner")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Enter Fluids By South-East Corner",
+                multiplayerSynced = true
+        )
         public Boolean allowSouthEastRule = false;
 
-        @ConfigName("Elevator Boats")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Elevator Boats",
+                multiplayerSynced = true
+        )
         public Boolean elevatorBoats = false;
 
-        @ConfigName("Hide Achievement Notifications")
+        @ConfigEntry(name = "Hide Achievement Notifications")
         public Boolean hideAchievementNotifications = false;
 
-        @ConfigName("Hide Dead Shrubs")
-        @Comment("Reload world for changes to take effect")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Hide Dead Shrubs",
+                description = "Reload world for changes to take effect",
+                multiplayerSynced = true
+        )
         public Boolean hideDeadShrubs = false;
 
-        @ConfigName("Hide Long Grass")
-        @Comment("Reload world for changes to take effect")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Hide Long Grass",
+                description = "Reload world for changes to take effect",
+                multiplayerSynced = true
+        )
         public Boolean hideLongGrass = false;
 
-        @ConfigName("Hoe Grass For Seeds")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Hoe Grass For Seeds",
+                multiplayerSynced = true
+        )
         public Boolean hoeGrassForSeeds = false;
 
-        @ConfigName("Milk Squids")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Milk Squids",
+                multiplayerSynced = true
+        )
         public Boolean milkSquids = false;
 
-        @ConfigName("Minecart Boosters")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Minecart Boosters",
+                multiplayerSynced = true
+        )
         public Boolean minecartBoosters = false;
 
-        @ConfigName("Pigs Drop Brown Mushrooms")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Pigs Drop Brown Mushrooms",
+                multiplayerSynced = true
+        )
         public Boolean pigsDropBrownMushrooms = false;
 
-        @ConfigName("Punch Sheep For Wool")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Punch Sheep For Wool",
+                multiplayerSynced = true
+        )
         public Boolean punchSheepForWool = false;
 
-        @ConfigName("Punch TNT To Ignite")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Punch TNT To Ignite",
+                multiplayerSynced = true
+        )
         public Boolean punchTntToIgnite = false;
 
-        @ConfigName("Spread Fire Infinitely")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Spread Fire Infinitely",
+                multiplayerSynced = true
+        )
         public Boolean infiniteFireSpread = false;
 
-        @ConfigName("Spread Fire Tick Rate")
-        @Comment("Default: 40, Alpha: 10")
-        @MaxLength(36863)
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Spread Fire Tick Rate",
+                description = "Default: 40, Alpha: 10",
+                multiplayerSynced = true,
+                maxLength =36863
+        )
         public Integer fireSpreadTickRate = 40;
 
-        @ConfigName("Use Player 2x2 Crafting Grid As Inventory")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
+        @ConfigEntry(
+                name = "Use Player 2x2 Crafting Grid As Inventory",
+                multiplayerSynced = true
+        )
         public Boolean allowCraftingInventorySlots = false;
     }
 }

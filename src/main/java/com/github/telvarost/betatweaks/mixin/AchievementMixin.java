@@ -19,15 +19,15 @@ public class AchievementMixin extends DrawContext {
     @Shadow
     private Minecraft client;
     @Shadow
-    private ItemRenderer field_2578;
+    private ItemRenderer itemRenderer;
 
     public AchievementMixin(Minecraft minecraft) {
         this.client = minecraft;
-        this.field_2578 = new ItemRenderer();
+        this.itemRenderer = new ItemRenderer();
     }
 
     @Inject(
-            method = "method_1964",
+            method = "set",
             at = @At("HEAD"),
             cancellable = true
     )

@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Entity.class)
 public class EntityMixin
 {
-    @Inject(method = "method_1393", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "checkWaterCollisions", at = @At("HEAD"), cancellable = true)
     private void betaTweaks_handleWaterMovement(@NotNull CallbackInfoReturnable<Boolean> cir)
     {
         if (!Config.config.allowSouthEastRule)

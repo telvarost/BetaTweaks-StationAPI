@@ -17,7 +17,7 @@ public class PigMixin extends AnimalEntity {
     }
 
     @Inject(
-            method = "getDroppedId",
+            method = "getDroppedItemId",
             at = @At("HEAD"),
             cancellable = true
     )
