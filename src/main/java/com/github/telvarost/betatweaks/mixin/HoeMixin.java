@@ -9,7 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.world.World;
-import net.modificationstation.stationapi.api.item.tool.StationHoeItem;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -18,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Random;
 
 @Mixin(HoeItem.class)
-public class HoeMixin extends Item implements StationHoeItem {
+public class HoeMixin extends Item {
     public HoeMixin(int i, ToolMaterial arg) {
         super(i);
         this.maxCount = 1;
