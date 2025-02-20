@@ -9,7 +9,7 @@
 ## Mod Info:
 
 All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to enable them. See installation instructions below.
-* Mod now works on Multiplayer with GlassConfigAPI version 3.0+ used to sync configs!
+* Mod works on Multiplayer with GlassConfigAPI version 3.0+ used to sync configs!
 
 ### Implemented
 * Allow player crafting grid (2x2 grid) to be used as inventory slots.
@@ -34,13 +34,13 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 
 ## Installation using Prism Launcher
 
-1. Download an instance of Babric for Prism Launcher: https://github.com/Glass-Series/babric-prism-instance
+1. Download an instance of Babric for Prism Launcher: https://github.com/babric/prism-instance
 2. Install Java 17 and set the instance to use it: https://adoptium.net/temurin/releases/
 3. Add GlassConfigAPI 3.0.2+ to the mod folder for the instance: https://modrinth.com/mod/glass-config-api
 4. Add Glass Networking to the mod folder for the instance: https://modrinth.com/mod/glass-networking
 5. (Optional) Add StationAPI to the mod folder for the instance: https://modrinth.com/mod/stationapi
 6. (Optional) Add Mod Menu to the mod folder for the instance: https://modrinth.com/mod/modmenu-beta
-7. Add this mod to the mod folder for the instance: https://github.com/telvarost/BetaTweaks-StationAPI/releases
+7. Add this mod to the mod folder for the instance: https://github.com/telvarost/GameplayEssentials-StationAPI/releases
 8. Run and enjoy! 👍
 
 ## Feedback
