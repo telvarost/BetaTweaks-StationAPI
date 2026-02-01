@@ -44,6 +44,17 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 7. Add this mod to the mod folder for the instance: https://github.com/telvarost/BetaTweaks-StationAPI/releases
 8. Run and enjoy! 👍
 
+## FAQ
+
+* Q. Why is minecraft so small and part of my screen white?
+  * A. You probably have screen scaling on or are using a high DPI screen. There are 5 possible ways to fix this:
+    * The best option is to install Gambac: [https://modrinth.com/mod/gambac](https://modrinth.com/mod/gambac)
+    * You could also pass the following string in as a java argument in the settings tab
+      * `-Dsun.java2d.uiScale=1.0`
+    * You could also install ClientsideEssentials mod or UniTweaks and use their screen scaling fix from GCAPI config options (fix may produce small artifacts with this option)
+    * You could also change the DPI settings for Prism Launcher to system
+    * Or, you could change your screen scaling to 100%
+
 ## Feedback
 
 Got any suggestions on what should be added next? Feel free to share it by [creating an issue](https://github.com/telvarost/BetaTweaks-StationAPI/issues/new). Know how to code and want to do it yourself? Then look below on how to get started.
