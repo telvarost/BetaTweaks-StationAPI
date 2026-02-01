@@ -14,6 +14,7 @@ All fixes are disabled by default. You will need ModMenu and GlassConfigAPI to e
 ### Implemented
 * Allow player crafting grid (2x2 grid) to be used as inventory slots.
 * Allow Gaps In Ladders
+* Disable Colored Sheep Spawning
 * Elevator Boats
 * Hide/Show Achievement Notifications
 * Hide/Show Dead Shrubs

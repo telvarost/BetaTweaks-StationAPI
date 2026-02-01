@@ -13,9 +13,9 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
  * Thanks to EOfSL for the original solution: https://github.com/EOfSL
  */
 @Mixin(MinecartEntity.class)
-abstract class MinecartMixin extends Entity implements Inventory
+abstract class MinecartEntityMixin extends Entity implements Inventory
 {
-    public MinecartMixin(World arg)
+    public MinecartEntityMixin(World arg)
     {
         super(arg);
     }
@@ -25,8 +25,7 @@ abstract class MinecartMixin extends Entity implements Inventory
             at = @At(value = "STORE"),
             ordinal = 6
     )
-    private double betaTweaks_minecartBoosterCondition(double d6)
-    {
+    private double betaTweaks_minecartBoosterCondition(double d6) {
         if (Config.config.minecartBoosters)
             return 0;
         else

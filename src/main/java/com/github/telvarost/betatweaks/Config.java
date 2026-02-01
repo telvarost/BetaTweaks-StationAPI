@@ -27,6 +27,13 @@ public class Config {
         public Boolean allowGapsInLadders = false;
 
         @ConfigEntry(
+                name = "Disable Colored Sheep Spawning",
+                description = "Makes sheep always spawn with white wool",
+                multiplayerSynced = true
+        )
+        public Boolean disableColoredSheepSpawning = false;
+
+        @ConfigEntry(
                 name = "Enter Fluids By South-East Corner",
                 multiplayerSynced = true
         )

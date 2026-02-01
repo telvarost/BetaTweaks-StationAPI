@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
  * Thanks to EOfSL for the original solution: https://github.com/EOfSL
  */
 @Mixin(BoatEntity.class)
-abstract class BoatMixin extends Entity {
-    public BoatMixin(World level) {
+abstract class BoatEntityMixin extends Entity {
+    public BoatEntityMixin(World level) {
         super(level);
     }
 

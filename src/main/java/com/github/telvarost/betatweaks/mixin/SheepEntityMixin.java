@@ -1,6 +1,7 @@
 package com.github.telvarost.betatweaks.mixin;
 
 import com.github.telvarost.betatweaks.Config;
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
@@ -16,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SheepEntity.class)
-public abstract class SheepMixin extends AnimalEntity {
+public abstract class SheepEntityMixin extends AnimalEntity {
 
     @Shadow public abstract boolean isSheared();
 
@@ -24,7 +25,7 @@ public abstract class SheepMixin extends AnimalEntity {
 
     @Shadow public abstract int getColor();
 
-    public SheepMixin(World arg) {
+    public SheepEntityMixin(World arg) {
         super(arg);
         this.texture = "/mob/sheep.png";
         this.setBoundingBoxSpacing(0.9F, 1.3F);
@@ -36,8 +37,7 @@ public abstract class SheepMixin extends AnimalEntity {
             cancellable = true
     )
     public void betaTweaks_damage(Entity arg, int i, CallbackInfoReturnable<Boolean> cir) {
-        if (!Config.config.punchSheepForWool)
-        {
+        if (!Config.config.punchSheepForWool) {
             return;
         }
 
@@ -53,6 +53,18 @@ public abstract class SheepMixin extends AnimalEntity {
                     var5.velocityZ += (double) ((this.random.nextFloat() - this.random.nextFloat()) * 0.1F);
                 }
             }
+        }
+    }
+
+    @ModifyReturnValue(
+            method = "generateDefaultColor",
+            at = @At("RETURN")
+    )
+    private static int betaTweaks_generateDefaultColor(int original) {
+        if (Config.config.disableColoredSheepSpawning) {
+            return 0;
+        } else {
+            return original;
         }
     }
 }

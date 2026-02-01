@@ -4,24 +4,24 @@
   "package": "com.github.telvarost.betatweaks.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "BoatMixin",
-    "DeadBushMixin",
+    "BoatEntityMixin",
+    "DeadBushBlockMixin",
     "EntityMixin",
-    "HoeMixin",
-    "LivingMixin",
-    "MinecartMixin",
-    "PigMixin",
-    "PlayerBaseMixin",
-    "PlayerContainerMixin",
-    "SheepMixin",
-    "SquidMixin",
-    "TallGrassMixin",
-    "TntMixin"
+    "HoeItemMixin",
+    "LivingEntityMixin",
+    "MinecartEntityMixin",
+    "PigEntityMixin",
+    "PlayerEntityMixin",
+    "PlayerScreenHandlerMixin",
+    "SheepEntityMixin",
+    "SquidEntityMixin",
+    "TallPlantBlockMixin",
+    "TntBlockMixin"
   ],
   "server": [
   ],
   "client": [
-    "AchievementMixin"
+    "client.AchievementToastMixin"
   ],
   "injectors": {
     "defaultRequire": 1

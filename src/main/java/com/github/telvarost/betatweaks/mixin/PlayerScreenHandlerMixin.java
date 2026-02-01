@@ -11,13 +11,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlayerScreenHandler.class)
-public class PlayerContainerMixin extends ScreenHandler {
+public class PlayerScreenHandlerMixin extends ScreenHandler {
 
-    public PlayerContainerMixin(PlayerInventory inventory) {
+    public PlayerScreenHandlerMixin(PlayerInventory inventory) {
         this(inventory, true);
     }
 
-    public PlayerContainerMixin(PlayerInventory arg, boolean bl) {
+    public PlayerScreenHandlerMixin(PlayerInventory arg, boolean bl) {
     }
 
     @Inject(method = "onClosed", at = @At("HEAD"), cancellable = true)

@@ -16,17 +16,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * Thanks to EOfSL for the original solution: https://github.com/EOfSL
  */
 @Mixin(LivingEntity.class)
-abstract class LivingMixin extends Entity
+abstract class LivingEntityMixin extends Entity
 {
-    public LivingMixin(World arg) {
+    public LivingEntityMixin(World arg) {
         super(arg);
     }
 
     @Inject(method = "isOnLadder", at = @At("HEAD"), cancellable = true)
-    public void betaTweaks_increaseLadderCoverage(@NotNull CallbackInfoReturnable<Boolean> cir)
-    {
-        if (!Config.config.allowGapsInLadders)
-        {
+    public void betaTweaks_increaseLadderCoverage(@NotNull CallbackInfoReturnable<Boolean> cir) {
+        if (!Config.config.allowGapsInLadders) {
             return;
         }
 

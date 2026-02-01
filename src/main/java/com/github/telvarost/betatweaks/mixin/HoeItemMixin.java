@@ -17,8 +17,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Random;
 
 @Mixin(HoeItem.class)
-public class HoeMixin extends Item {
-    public HoeMixin(int i, ToolMaterial arg) {
+public class HoeItemMixin extends Item {
+    public HoeItemMixin(int i, ToolMaterial arg) {
         super(i);
         this.maxCount = 1;
         this.setMaxDamage(arg.getDurability());
@@ -30,8 +30,7 @@ public class HoeMixin extends Item {
             cancellable = true
     )
     public void betaTweaks_useOnTile(ItemStack arg, PlayerEntity arg2, World arg3, int i, int j, int k, int l, CallbackInfoReturnable<Boolean> cir) {
-        if (!Config.config.hoeGrassForSeeds)
-        {
+        if (!Config.config.hoeGrassForSeeds) {
             return;
         }
 

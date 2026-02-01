@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(TntBlock.class)
-public class TntMixin extends Block {
+public class TntBlockMixin extends Block {
 
-    public TntMixin(int i, int j) {
+    public TntBlockMixin(int i, int j) {
         super(i, j, Material.TNT);
     }
 

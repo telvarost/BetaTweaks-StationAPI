@@ -3,8 +3,8 @@ package com.github.telvarost.betatweaks.mixin;
 import com.github.telvarost.betatweaks.Config;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.DeadBushBlock;
 import net.minecraft.block.PlantBlock;
+import net.minecraft.block.TallPlantBlock;
 import net.minecraft.world.BlockView;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,9 +13,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Random;
 
-@Mixin(DeadBushBlock.class)
-public class DeadBushMixin extends PlantBlock {
-    public DeadBushMixin(int i, int j) {
+@Mixin(TallPlantBlock.class)
+public class TallPlantBlockMixin extends PlantBlock {
+    public TallPlantBlockMixin(int i, int j) {
         super(i, j);
     }
 
@@ -25,7 +25,7 @@ public class DeadBushMixin extends PlantBlock {
             cancellable = true
     )
     public void getDropId(int i, Random random, CallbackInfoReturnable<Integer> cir) {
-        if (Config.config.hideDeadShrubs) {
+        if (Config.config.hideLongGrass) {
             cir.setReturnValue(-1);
         }
     }
@@ -50,7 +50,7 @@ public class DeadBushMixin extends PlantBlock {
 
     @Override
     public void updateBoundingBox(BlockView blockView, int x, int y, int z) {
-        if (Config.config.hideDeadShrubs) {
+        if (Config.config.hideLongGrass) {
             this.setBoundingBox(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F);
         }
         else {

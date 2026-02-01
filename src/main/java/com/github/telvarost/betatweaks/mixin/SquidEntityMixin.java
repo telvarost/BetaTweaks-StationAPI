@@ -10,8 +10,8 @@ import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(SquidEntity.class)
-public class SquidMixin extends WaterCreatureEntity {
-    public SquidMixin(World arg) {
+public class SquidEntityMixin extends WaterCreatureEntity {
+    public SquidEntityMixin(World arg) {
         super(arg);
     }
 

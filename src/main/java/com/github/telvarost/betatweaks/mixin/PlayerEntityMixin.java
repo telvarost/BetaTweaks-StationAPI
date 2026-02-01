@@ -16,17 +16,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlayerEntity.class)
-public abstract class PlayerBaseMixin extends LivingEntity {
+public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow public ScreenHandler playerScreenHandler;
 
-    public PlayerBaseMixin(World arg) {
+    public PlayerEntityMixin(World arg) {
         super(arg);
     }
 
     @Unique
-    private void betaTweaks_clearSlotData(NbtCompound tag, int slotIndex)
-    {
+    private void betaTweaks_clearSlotData(NbtCompound tag, int slotIndex) {
         tag.putInt("ItemID_Slot" + slotIndex, 0);
         tag.putInt("ItemAmount_Slot" + slotIndex, 0);
         tag.putInt("ItemDamage_Slot" + slotIndex, 0);

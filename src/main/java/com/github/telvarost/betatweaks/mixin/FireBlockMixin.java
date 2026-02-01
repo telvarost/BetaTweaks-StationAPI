@@ -9,21 +9,19 @@ import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
 
-
 /*
  * Thanks to Amb0s for the original solution: https://github.com/Amb0s
  */
 @Mixin(FireBlock.class)
-public class FireMixin extends Block
-{
-    public FireMixin(int i, int j) {
+public class FireBlockMixin extends Block {
+
+    public FireBlockMixin(int i, int j) {
         super(i, j, Material.FIRE);
         this.setTickRandomly(true);
     }
 
     @ModifyConstant(method = "getTickRate", constant = @Constant(intValue = 40))
-    private int betaTweaks_getTickrate(int a)
-    {
+    private int betaTweaks_getTickrate(int a) {
         /** - Tick rate is 10 before beta 1.6 */
         return (Config.config.fireSpreadTickRate);
     }
@@ -36,11 +34,9 @@ public class FireMixin extends Block
                     target = "Lnet/minecraft/world/World;setBlock(IIIII)Z"
             )
     )
-    private boolean betaTweaks_fireTick(@NotNull World level, int x, int y, int z, int id, int meta)
-    {
+    private boolean betaTweaks_fireTick(@NotNull World level, int x, int y, int z, int id, int meta) {
         // Make new fire blocks spawn with zero old:
-        if (Config.config.infiniteFireSpread)
-        {
+        if (Config.config.infiniteFireSpread) {
             level.setBlock(x, y, z, Block.FIRE.id, 0);
         }
 

@@ -1,4 +1,4 @@
-package com.github.telvarost.betatweaks.mixin;
+package com.github.telvarost.betatweaks.mixin.client;
 
 import com.github.telvarost.betatweaks.Config;
 import net.fabricmc.api.EnvType;
@@ -15,13 +15,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Environment(EnvType.CLIENT)
 @Mixin(AchievementToast.class)
-public class AchievementMixin extends DrawContext {
+public class AchievementToastMixin extends DrawContext {
     @Shadow
     private Minecraft client;
     @Shadow
     private ItemRenderer itemRenderer;
 
-    public AchievementMixin(Minecraft minecraft) {
+    public AchievementToastMixin(Minecraft minecraft) {
         this.client = minecraft;
         this.itemRenderer = new ItemRenderer();
     }
@@ -32,8 +32,7 @@ public class AchievementMixin extends DrawContext {
             cancellable = true
     )
     public void setAchievementGet(net.minecraft.achievement.Achievement arg, CallbackInfo ci) {
-        if (Config.config.hideAchievementNotifications)
-        {
+        if (Config.config.hideAchievementNotifications) {
             ci.cancel();
         }
     }
